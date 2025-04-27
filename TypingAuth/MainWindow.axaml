@@ -1,0 +1,32 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="600" d:DesignHeight="450"
+        x:Class="TypingAuth.MainWindow"
+        Title="TypingAuth">
+    <Grid Margin="5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="200" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+        </Grid.RowDefinitions>
+        <TextBlock TextAlignment="Center" VerticalAlignment="Center" Grid.Row="0" FontSize="36" FontWeight="Bold">
+            Write the following text in a textbox below
+        </TextBlock>
+        <TextBlock TextAlignment="Justify" Grid.Row="1" Padding="50" FontFamily="mono" FontSize="24"
+                   TextWrapping="Wrap" Name="PhraseDisplay">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+        </TextBlock>
+        <TextBox Grid.Row="2" FontSize="24" Name="PhraseTextBox" TextChanged="PhraseTextBox_OnTextChanged" TextWrapping="Wrap"></TextBox>
+        <Button Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="16" Click="Button_OnClick">Sign in</Button>
+        <Grid Grid.Row="4" ColumnDefinitions="Auto,Auto" RowDefinitions="Auto, Auto">
+            <TextBlock Grid.Column="0" Grid.Row="0">Errors: </TextBlock>
+            <TextBlock Grid.Column="1" Grid.Row="0" Name="ErrorDisplay">0</TextBlock>
+            <TextBlock Grid.Column="0" Grid.Row="1">Avg word typing speed (ms): </TextBlock>
+            <TextBlock Grid.Column="1" Grid.Row="1" Name="AvgWordDisplay">0</TextBlock>
+        </Grid>
+    </Grid>
+</Window>
