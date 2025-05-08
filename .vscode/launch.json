@@ -1,0 +1,25 @@
+{
+  "configurations": [
+    {
+      "name": "Client (Debug)",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "dotnet: build /home/pfxel/projects/TypingAuth/TypingAuth/TypingAuth.csproj",
+      "program": "${workspaceFolder}/TypingAuth/bin/Debug/net9.0/TypingAuth.dll",
+      "args": [],
+      "cwd": "${workspaceFolder}/TypingAuth/bin/Debug/net9.0",
+      "console": "internalConsole",
+      "stopAtEntry": false,
+      "justMyCode": false,
+      "logging": {
+          "moduleLoad": false
+      },
+      "internalConsoleOptions": "openOnSessionStart",
+      "pipeTransport": {
+        "pipeProgram": "/usr/bin/bash",
+        "pipeArgs": ["-c"],
+        "debuggerPath": "/usr/bin/netcoredbg"
+      }
+    }
+  ]
+}
